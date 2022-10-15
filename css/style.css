@@ -1,0 +1,516 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    min-height: 100vh;
+    background-image: url(../img/bg-pg-1.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* Navegacion */
+
+nav {
+    height: 100px;
+    width: 100%;
+    background-color: rgba(10, 10, 10, 0.716);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    width: 100px;
+    margin-left: 15px;
+} 
+
+.bar-btn {
+    font-size: 25px;
+    color: #fff;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.nav-menu {
+    position: fixed;
+    width: 100%;
+    height: 0vh;
+    top: 100px;
+    background:  rgba(10, 10, 10, 0.716);
+    text-align: center;
+    transition: all .5s;
+    z-index: 1000;
+}
+
+.nav-menu li {
+    display: none;
+    line-height: 30px;
+    margin: 50px 0;
+    transition: all .5s;
+}
+
+.nav-menu li a {
+    color: white;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.nav-menu li a.active, .nav-menu li a:hover {
+    color: rgb(255, 166, 1);
+    transition: .3s;
+}
+
+#check {
+    display: none;
+}
+
+#check:checked ~ .nav-menu {
+    height: 100vh;
+}
+
+#check:checked ~ .nav-menu li {
+    display: block;
+}
+
+ /* Banner text */
+
+ .banner-text {
+    width: 100%;
+    padding: 0px 5px;
+    margin-top: 15px;
+    text-align: center;
+    color: rgb(255, 192, 1);
+    background-color: rgba(28, 28, 28, 0.749);
+ }
+
+ .banner-text h1 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 15px;
+ }
+
+ .banner-text span {
+    color: white;
+    font-weight: 600;
+}
+
+ .banner-text-maps {
+    width: 100%;
+    padding: 0px 5px;
+    margin-top: 15px;
+    text-align: center;
+    color: rgb(255, 192, 1);
+    background-color: rgba(28, 28, 28, 0.749);
+}
+
+.banner-text-maps h1 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.banner-text-maps span {
+    color: white;
+    font-weight: 600;
+}
+
+ .button1 {
+    margin-right: 15px;
+    padding: 5px 10px;
+    background-color: orange;
+    border-radius: 5px;
+    text-decoration: none;
+ }
+
+ .button1:hover {
+    background-color: #fff;
+    color: orange;
+    transition: .5s;
+ }
+
+ .button2 {
+    padding: 5px 10px;
+    background-color: white;
+    color: orange;
+    text-decoration: none;
+    border-radius: 5px;
+ }
+
+ .button2:hover {
+    background-color: orange;
+    color: #fff;
+    transition: .5s;
+ }
+
+ /*  Responsive Design for tablet and desktop*/
+
+@media screen and (min-width: 768px) {
+    .logo{
+        margin-left: 50px;
+    }
+
+    nav {
+        background-color: rgba(30, 28, 28, 0.727);
+        height: 60px;
+    }
+
+    .bar-btn  {
+        display: none;
+    }
+
+    .nav-menu {
+        position: relative;
+        height: 100px;
+        top: 0;
+        background: none;
+        transition: none;
+        text-align: right;
+        margin-right: 50px;
+    }
+
+    .nav-menu li {
+        display: inline-block;
+        line-height: 100px;
+        margin: 0 20px;
+        transition: none;
+    }
+
+    .nav-menu li a {
+        color: white;
+        font-size: 12px;
+    }
+
+    .banner-text {
+        width: 60%;
+        margin-left: 1%;
+        float: left;
+        border-radius: 5px;
+    }
+
+    .banner-text-maps {
+        width: 100%;
+        border-radius: 5px;
+    }
+
+    .banner-text h1 {
+        font-size: 26px;
+        font-weight: 400;
+        margin-bottom: 30px;
+    }
+
+    .banner-text-maps h1 {
+        font-size: 45px;
+        font-weight: 400;
+        margin-bottom: 15px;
+        padding: 2px;
+    }
+
+    .left {
+        margin-top: -15px;
+        margin-left: 30px;
+        width: 35%;
+        float: left;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .banner-text h1 {
+        font-size: 30px;
+    }
+}
+
+/*Boton wsp*/
+
+.btn-wsp {
+    position: fixed;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    bottom: 30px;
+    right: 10px;
+    background-color: #0df053;
+    color: white;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 22px;
+    box-shadow: 0px 1px 20px rgba(0, 0, 0, 0.7);
+    z-index: 999;
+}
+
+.btn-wsp:hover {
+    text-decoration: none;
+    color: #0df053;
+    background-color: white;
+    transition: 0.3s;
+}
+
+@media screen and (min-width: 768px) {
+    .btn-wsp {
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        font-size: 28px;
+    }
+
+}
+
+@media screen and (min-width: 1024px) {
+        .btn-wsp {
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+        font-size: 35px;
+    }
+
+    .btn-wsp:hover {
+        transform: scale(1.08);
+    }
+}
+
+
+/* Tabla de posiciones*/
+div.container-table {
+    margin: 30px;
+}
+caption {
+    padding: 2px;
+    font-family: italic;
+    width: 100%;
+    margin: 0 auto;
+    font-size: 20px;
+    text-align: center;
+    background-color: rgba(44, 40, 40, 0.734);
+    color: white;
+    border-radius: 4px 4px 0px 0px;
+}
+
+table {
+    margin: 0 auto;
+    border-collapse: collapse;
+    background-color: white;
+}
+
+td,th {
+    border: 1px solid rgb(152, 151, 151);
+    padding: 4px 8px 4px 8px;
+    text-align: center;
+    font-size: 12px;
+}
+
+th {
+    background-color: rgba(0, 0, 0, 0.811);
+    color: white;
+}
+
+@media screen and (min-width: 768px) {
+    td,th {
+        font-size: 10px;
+        padding: 5px 10px 5px 10px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+
+    td, th {
+        font-size: 12px;
+        padding: 10px 20px 10px 20px;
+    }
+
+}
+    /* Contacto */
+
+div form {
+    display: block;
+    text-align: center;
+    margin-top: 100px;
+    padding: 10px;
+    background-color: rgba(128, 128, 128, 0.656);
+    width: 100%;
+}
+
+label {
+    display: block;
+    text-align: center;
+    color: white;
+}
+
+input {
+    text-align: center;
+    background-color: white;
+    color: orange;
+    margin: 10px;
+    padding: 2px;
+    border-style: none;
+}
+
+.enviar {
+    color: white;
+    border-style: none;
+    background-color: rgba(255, 166, 0, 0.615);
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.enviar:hover {
+    background-color: orange;
+    transition: 0.5s;
+}
+
+@media screen and (min-width: 768px) {
+    
+    .formulario {
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+        width: 50%;
+    }
+}
+
+/* Reglas */
+
+section.rules-1 {
+    display: block;
+    text-align: center;
+    margin: 5px;
+    margin-top: 15px;
+    padding: 5px;
+    background-color: rgba(43, 43, 43, 0.542);
+}
+
+section div {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+}
+
+section div h2 {
+    font-weight: 600;
+    color: white;
+}
+
+section div .rules-text{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+section div .rules-text p {
+    font-weight: 600;
+    color: rgba(255, 166, 0, 0.881);
+    margin-top: 20px;
+}
+
+section div .rules-text p span {
+    font-weight: 600;
+    color: white;
+}
+
+@media screen and (min-width:768px) {
+    
+    section div .rules-text {
+        display: block;
+        text-align: center;
+        margin: 20px;
+        padding: 20px;
+    }
+
+    section div .rules-text p {
+        color: rgba(255, 166, 0, 0.881);
+        font-size: 16px;
+    }
+}
+
+/* Footer */
+
+footer {
+    width: 100%;
+    margin-top: auto;
+}
+
+footer div.footer {
+    height: 100%;
+    width: 100%;
+    background-color: rgb(249, 150, 12);
+    display: inline-block;
+}
+
+footer div.footer h4 {
+    display: block;
+    text-align: center;
+    font-weight: 600;
+    color: rgb(216, 216, 216);
+    margin-top: 2px;
+}
+
+footer div.footer div h3 {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 13px;
+}
+
+footer div.footer div ul{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 15px;
+    justify-content: space-evenly;
+}
+
+footer div.footer div ul a {
+    color: rgb(217, 217, 217);
+    font-size: 18px;
+}
+
+
+footer div.footer div ul a.ig:hover {
+    color: rgb(115, 1, 115);
+}
+footer div.footer div ul a.fb:hover {
+    color: rgb(39, 144, 224);
+}
+footer div.footer div ul a.tw:hover {
+    color: rgb(80, 208, 248);
+}
+footer div.footer div ul a.wsp:hover {
+    color: rgb(25, 176, 25);
+}
+
+/*  Ubicacion */
+
+div.maps iframe {
+    display: block;
+    margin: 0 auto;
+    width: 80%;
+    height: 80%;
+}
+
+@media screen and (min-width: 768px) {
+    div.maps iframe {
+        display: block;
+        margin: 0 auto;
+        width: 700px;
+        height: 400px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    div.maps iframe {
+        display: block;
+        margin: 0 auto;
+        width: 850px;
+        height: 400px;
+    }
+}
