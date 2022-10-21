@@ -1,2 +1,2 @@
 # pagina-voley-beta02
-Pagina web en procceso beta
+Pagina web de Liga de voleyball Local
